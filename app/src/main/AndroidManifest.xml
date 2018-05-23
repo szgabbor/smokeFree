@@ -20,7 +20,8 @@
         <activity
             android:name=".pula_activity"
             android:label="@string/title_activity_pula_activity"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".dataActivity"></activity>
     </application>
 
 </manifest>

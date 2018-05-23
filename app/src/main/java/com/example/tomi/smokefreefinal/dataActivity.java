@@ -10,33 +10,29 @@ import android.widget.Spinner;
 import android.widget.ArrayAdapter;
 
 public class dataActivity extends AppCompatActivity {
-    int cig,yr,mnth,prce;
-    EditText cigsinput;
-    EditText yearinput;
-    EditText monthinput;
-    EditText priceinput;
-    Button send;
+    public  static  final  String EXTRA_NUMBER = "com.exemple.application.example.EXTRA_NUMER";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_data);
-        cigsinput = findViewById(R.id.cigsinput);
-        yearinput = findViewById(R.id.yearinput);
-        monthinput = findViewById(R.id.monthinput);
-        priceinput = findViewById(R.id.priceinput);
-        send = findViewById(R.id.send);
-        send.setOnClickListener(new View.OnClickListener() {
+
+        Button button = (Button) findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                cig = Integer.valueOf( cigsinput.getText().toString());
-                yr = Integer.valueOf(yearinput.getText().toString());
-                mnth = Integer.valueOf(monthinput.getText().toString());
-                prce = Integer.valueOf(priceinput.getText().toString());
+                openActivity_pula();
             }
         });
+
     }
-    public void startProgram(View view){
-        Intent start = new Intent(this, pula_activity.class);
-        startActivity(start);
+    public void openActivity_pula(){
+
+        EditText cigsinput = (EditText) findViewById(R.id.cigsinput);
+        int cigsperday = Integer.parseInt(cigsinput.getText().toString());
+
+        Intent intent = new Intent(this, pula_activity.class);
+        intent.putExtra(EXTRA_NUMBER, cigsperday);
+        startActivity(intent);
     }
 }
