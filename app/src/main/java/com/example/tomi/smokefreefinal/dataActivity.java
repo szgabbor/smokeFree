@@ -10,7 +10,10 @@ import android.widget.Spinner;
 import android.widget.ArrayAdapter;
 
 public class dataActivity extends AppCompatActivity {
-    public  static  final  String EXTRA_NUMBER = "com.exemple.application.example.EXTRA_NUMER";
+    public  static  final  String cigss = "com.exemple.application.example.cigss";
+    public  static  final  String yearr = "com.exemple.application.example.yearr";
+    public  static  final  String monthh = "com.exemple.application.example.monthh";
+    public  static  final  String pricee = "com.exemple.application.example.pricee";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,10 +32,20 @@ public class dataActivity extends AppCompatActivity {
     public void openActivity_pula(){
 
         EditText cigsinput = (EditText) findViewById(R.id.cigsinput);
+        EditText yearinput = (EditText) findViewById(R.id.yearinput);
+        EditText monthinput = (EditText) findViewById(R.id.monthinput);
+        EditText priceinput = (EditText) findViewById(R.id.priceinput);
         int cigsperday = Integer.parseInt(cigsinput.getText().toString());
+        int year  = Integer.parseInt(yearinput.getText().toString());
+        int month = Integer.parseInt(monthinput.getText().toString());
+        int price = Integer.parseInt(priceinput.getText().toString());
+
 
         Intent intent = new Intent(this, pula_activity.class);
-        intent.putExtra(EXTRA_NUMBER, cigsperday);
+        intent.putExtra(cigss, cigsperday);
+        intent.putExtra(yearr, year);
+        intent.putExtra(monthh, month);
+        intent.putExtra(pricee, price);
         startActivity(intent);
     }
 }

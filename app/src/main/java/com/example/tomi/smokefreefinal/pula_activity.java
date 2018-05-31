@@ -33,11 +33,28 @@ public class pula_activity extends AppCompatActivity {
 
         Intent intent = getIntent();
 
-        int cigsperday = intent.getIntExtra(dataActivity.EXTRA_NUMBER, 0);
+        int cigsperday = intent.getIntExtra(dataActivity.cigss, 0);
+        int year = intent.getIntExtra(dataActivity.yearr, 0);
+        int month = intent.getIntExtra(dataActivity.monthh, 0);
+        int price = intent.getIntExtra(dataActivity.pricee, 0);
 
-        TextView cigsinput = (TextView) findViewById(R.id.textView7);
+        int priceperday = (price*cigsperday)/20;
+
+
+        /*TextView cigsinput = (TextView) findViewById(R.id.cigsinputid);
+        TextView time1 = (TextView) findViewById(R.id.yearinputid);
+        TextView time2 = (TextView) findViewById(R.id.monthinputid);
+        TextView cigsprice = (TextView) findViewById(R.id.priceinputid);
 
         cigsinput.setText("" + cigsperday);
+        time1.setText("" + year);
+        time2.setText("" + month);
+        cigsprice.setText("" + price);*/
+
+        // a kommentarban levo resz az hogy csak simplan kiiratom a 4 vatozot amit atveszek a data activitybol :D
+        String message = "If you stop smoking you will save " + priceperday*2*365;
+        TextView first = (TextView) findViewById(R.id.cigsinputid);
+        first.setText(message + "Money in 2 year");
     }
 
 }
