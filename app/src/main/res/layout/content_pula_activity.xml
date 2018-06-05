@@ -7,7 +7,7 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.tomi.smokefreefinal.pula_activity"
     tools:showIn="@layout/activity_pula_activity"
-    android:background="@drawable/background_image">
+    android:background="@drawable/background_image2">
 
     <TextView
         android:id="@+id/cigsinputid"

@@ -1,6 +1,10 @@
 package com.example.tomi.smokefreefinal;
 
+
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.media.Image;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -12,6 +16,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class pula_activity extends AppCompatActivity {
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +61,9 @@ public class pula_activity extends AppCompatActivity {
         String message = "If you stop smoking you will save " + priceperday*2*365;
         TextView first = (TextView) findViewById(R.id.cigsinputid);
         first.setText(message + "Money in 2 year");
+
+
+
     }
 
 }

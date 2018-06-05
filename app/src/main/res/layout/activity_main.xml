@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.tomi.smokefreefinal.MainActivity">
+    tools:context="com.example.tomi.smokefreefinal.MainActivity"
+    android:background="@color/BackgroundColor">
 
     <TextView
         android:id="@+id/textView"
@@ -19,7 +20,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.073" />
+        app:layout_constraintVertical_bias="0.073"
+        android:textColor="@color/TextColor"/>
 
     <Button
         android:id="@+id/button"
