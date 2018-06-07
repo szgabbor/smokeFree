@@ -41,7 +41,7 @@ public class dataActivity extends AppCompatActivity {
         int price = Integer.parseInt(priceinput.getText().toString());
 
 
-        Intent intent = new Intent(this, pula_activity.class);
+        Intent intent = new Intent(this, TabbedActivity.class);
         intent.putExtra(cigss, cigsperday);
         intent.putExtra(yearr, year);
         intent.putExtra(monthh, month);

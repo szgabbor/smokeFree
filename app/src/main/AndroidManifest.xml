@@ -20,8 +20,12 @@
         <activity
             android:name=".pula_activity"
             android:label="@string/title_activity_pula_activity"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:parentActivityName=".dataActivity"></activity>
+            android:parentActivityName=".dataActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".TabbedActivity"
+            android:label="@string/title_activity_tabbed"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
